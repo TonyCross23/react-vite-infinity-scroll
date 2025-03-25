@@ -42,7 +42,11 @@ const Home = () => {
   }, [fetchNextPage, hasNextPage]);
 
   if (isLoading) {
-    return <Loading />;
+    return (
+      <div className="mt-10">
+        <Loading />
+      </div>
+    );
   }
 
   if (status === "error") {
@@ -55,9 +59,9 @@ const Home = () => {
   }
 
   return (
-    <div className="w-xl mx-auto p-4 space-y-2">
+    <div className="w-full md:w-xl mx-auto p-4 space-y-2">
       {data?.pages.map((page, index) => (
-        <div key={index} className="grid gap-4">
+        <div key={index} className="grid sm:grid-cols-1 gap-4">
           {page.recipes.map((recipe) => (
             <Card key={recipe.id} recipe={recipe} />
           ))}

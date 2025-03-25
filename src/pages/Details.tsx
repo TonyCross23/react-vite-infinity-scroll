@@ -36,7 +36,7 @@ const Details = () => {
   return (
     <div className="mt-8">
       {recipe && (
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           <img src={recipe.image} alt={recipe.name} />
           <div className="space-y-2">
             <h2 className="text-2xl font-bold"> {recipe.name}</h2>
