@@ -78,8 +78,8 @@ const Navbar = () => {
                 className={({ isActive }) =>
                   `w-[100px] text-center rounded-md py-1 mx-auto transition ${
                     isActive
-                      ? "bg-gray-100 dark:text-black"
-                      : "px-4 my-1 hover:bg-gray-100 dark:hover:text-black"
+                      ? "bg-gray-100 text-black dark:text-black"
+                      : "px-4 my-1 hover:bg-gray-100 text-black dark:hover:text-black"
                   }`
                 }
               >
@@ -90,8 +90,8 @@ const Navbar = () => {
                 className={({ isActive }) =>
                   `w-[100px] text-center rounded-md py-1 mx-auto transition ${
                     isActive
-                      ? "bg-gray-100 dark:text-black"
-                      : "px-4 my-1 hover:bg-gray-100 dark:hover:text-black"
+                      ? "bg-gray-100 text-black dark:text-black"
+                      : "px-4 my-1 hover:bg-gray-100 text-black dark:hover:text-black"
                   }`
                 }
               >
@@ -102,8 +102,8 @@ const Navbar = () => {
                 className={({ isActive }) =>
                   `w-[100px] text-center rounded-md py-1 mx-auto transition ${
                     isActive
-                      ? "bg-gray-100 dark:text-black"
-                      : "px-4 my-1 hover:bg-gray-100 dark:hover:text-black"
+                      ? "bg-gray-100 text-black dark:text-black"
+                      : "px-4 my-1 hover:bg-gray-100 text-black dark:hover:text-black"
                   }`
                 }
               >
