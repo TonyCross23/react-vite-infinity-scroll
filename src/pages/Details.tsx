@@ -39,9 +39,12 @@ const Details = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           <img src={recipe.image} alt={recipe.name} />
           <div className="space-y-2">
-            <h2 className="text-2xl font-bold uppercase"> {recipe.name}</h2>
+            <h2 className="text-2xl font-bold uppercase dark:text-white">
+              {" "}
+              {recipe.name}
+            </h2>
             <p className="text-gray-500 text-sm">
-              Difficulty:{" "}
+              <span className="dark:text-white/80">Difficulty - </span>
               <span
                 className={`inline-block px-2 text-white rounded-full text-sm ${
                   recipe.difficulty === "Easy"
@@ -55,32 +58,44 @@ const Details = () => {
               </span>
             </p>
             <div>
-              <h4 className="text-md font-bold uppercase">Preparation Time</h4>
+              <h4 className="text-md font-bold uppercase dark:text-white/80">
+                Preparation Time
+              </h4>
               <div className="flex gap-2 items-center text-sm">
-                <LuAlarmClock />
-                <span>{recipe.prepTimeMinutes} Minutes</span>
+                <LuAlarmClock className="dark:text-white" />
+                <span className="dark:text-white">
+                  {recipe.prepTimeMinutes} Minutes
+                </span>
               </div>
             </div>
             <div>
-              <h4 className="text-md font-bold uppercase">Cooking time</h4>
+              <h4 className="text-md font-bold uppercase dark:text-white/80">
+                Cooking time
+              </h4>
               <div className="flex gap-2 items-center text-sm">
-                <RxLapTimer />
-                <span>{recipe.cookTimeMinutes} Minutes</span>
+                <RxLapTimer className="dark:text-white" />
+                <span className="dark:text-white">
+                  {recipe.cookTimeMinutes} Minutes
+                </span>
               </div>
             </div>
             <div>
-              <h4 className="text-md font-bold uppercase">Ingredients</h4>
-              <p>{recipe.ingredients}</p>
+              <h4 className="text-md font-bold uppercase dark:text-white/80">
+                Ingredients
+              </h4>
+              <p className="dark:text-white">{recipe.ingredients}</p>
             </div>
             <div>
-              <h4 className="text-md font-bold uppercase">Instructions</h4>
-              <p>{recipe.instructions}</p>
+              <h4 className="text-md font-bold uppercase dark:text-white/80">
+                Instructions
+              </h4>
+              <p className="dark:text-white">{recipe.instructions}</p>
             </div>
             <ol className="flex flex-wrap gap-2">
               {recipe.tags.map((tag, index) => (
                 <li
                   key={index}
-                  className="px-2 text-sm font-medium text-red-300 bg-gray-100 rounded-full"
+                  className="px-2 text-sm font-medium text-red-300 dark:bg-gray-50 dark:text-red-500 bg-gray-100 rounded-full"
                 >
                   {tag}
                 </li>
@@ -88,10 +103,12 @@ const Details = () => {
             </ol>
 
             <div>
-              <h4 className="text-md font-bold uppercase">Rating</h4>
+              <h4 className="text-md font-bold uppercase dark:text-white/80">
+                Rating
+              </h4>
               <div className="flex items-center gap-2">
-                <FaRegStar />
-                <p>{recipe.rating}</p>
+                <FaRegStar className="dark:text-white/80" />
+                <p className="dark:text-white">{recipe.rating}</p>
               </div>
             </div>
           </div>

@@ -10,18 +10,20 @@ const Card = ({ recipe }: RecipeProps) => {
   return (
     <Link
       to={`/recipes/${recipe.id}`}
-      className="p-2 border border-gray-300 rounded-md shadow-sm"
+      className="p-2 border border-gray-300 dark:border-neutral-600 rounded-md shadow-sm"
     >
       <img
         src={recipe.image}
         alt={recipe.name}
         className="w-full h-56 object-cover rounded-md mb-3"
       />
-      <h2 className="text-lg font-semibold mb-3">{recipe.name}</h2>
+      <h2 className="text-lg font-semibold mb-3 dark:text-white/80">
+        {recipe.name}
+      </h2>
       <div className="flex items-center justify-between">
         <p className="text-gray-500 text-sm">
           <span
-            className={`inline-block px-2 text-white rounded-full text-sm ${
+            className={`inline-block px-2 text-white dark:text-white rounded-full text-sm ${
               recipe.difficulty === "Easy"
                 ? "bg-green-300" // light green for Easy
                 : recipe.difficulty === "Medium"
@@ -33,7 +35,7 @@ const Card = ({ recipe }: RecipeProps) => {
           </span>
         </p>
         <p>
-          <FaRegBookmark />
+          <FaRegBookmark className="dark:text-white/80" />
         </p>
       </div>
     </Link>
