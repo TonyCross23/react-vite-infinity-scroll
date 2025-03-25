@@ -59,7 +59,7 @@ const Home = () => {
   }
 
   return (
-    <div className="w-full md:w-xl mx-auto p-4 space-y-2">
+    <div className="w-full md:w-md mx-auto p-2 space-y-2">
       {data?.pages.map((page, index) => (
         <div key={index} className="grid sm:grid-cols-1 gap-4">
           {page.recipes.map((recipe) => (

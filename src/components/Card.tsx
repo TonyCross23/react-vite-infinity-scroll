@@ -10,7 +10,7 @@ const Card = ({ recipe }: RecipeProps) => {
   return (
     <Link
       to={`/recipes/${recipe.id}`}
-      className="p-4 border border-gray-300 rounded-md shadow-sm"
+      className="p-2 border border-gray-300 rounded-md shadow-sm"
     >
       <img
         src={recipe.image}

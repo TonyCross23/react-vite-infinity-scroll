@@ -39,7 +39,7 @@ const Details = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           <img src={recipe.image} alt={recipe.name} />
           <div className="space-y-2">
-            <h2 className="text-2xl font-bold"> {recipe.name}</h2>
+            <h2 className="text-2xl font-bold uppercase"> {recipe.name}</h2>
             <p className="text-gray-500 text-sm">
               Difficulty:{" "}
               <span
@@ -55,25 +55,25 @@ const Details = () => {
               </span>
             </p>
             <div>
-              <h4 className="text-md font-bold">Prep time minutes</h4>
+              <h4 className="text-md font-bold uppercase">Preparation Time</h4>
               <div className="flex gap-2 items-center text-sm">
                 <LuAlarmClock />
                 <span>{recipe.prepTimeMinutes} Minutes</span>
               </div>
             </div>
             <div>
-              <h4 className="text-md font-bold">Cook time minutes</h4>
+              <h4 className="text-md font-bold uppercase">Cooking time</h4>
               <div className="flex gap-2 items-center text-sm">
                 <RxLapTimer />
                 <span>{recipe.cookTimeMinutes} Minutes</span>
               </div>
             </div>
             <div>
-              <h4 className="text-md font-bold">Ingredients</h4>
+              <h4 className="text-md font-bold uppercase">Ingredients</h4>
               <p>{recipe.ingredients}</p>
             </div>
             <div>
-              <h4 className="text-md font-bold">Instructions</h4>
+              <h4 className="text-md font-bold uppercase">Instructions</h4>
               <p>{recipe.instructions}</p>
             </div>
             <ol className="flex flex-wrap gap-2">
@@ -88,7 +88,7 @@ const Details = () => {
             </ol>
 
             <div>
-              <h4 className="text-md font-bold">Rating</h4>
+              <h4 className="text-md font-bold uppercase">Rating</h4>
               <div className="flex items-center gap-2">
                 <FaRegStar />
                 <p>{recipe.rating}</p>
