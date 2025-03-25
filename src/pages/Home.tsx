@@ -1,8 +1,9 @@
 import { useInfiniteQuery } from "@tanstack/react-query";
 import fetchRecipes from "../api/axios";
 import { useEffect, useRef } from "react";
-import { Recipe, RecipesResponse } from "../types/Recipes";
+import { RecipesResponse } from "../types/Recipes";
 import Loading from "../components/Loading";
+import Card from "../components/Card";
 
 const Home = () => {
   const {
@@ -54,35 +55,11 @@ const Home = () => {
   }
 
   return (
-    <div className="w-2xl mx-auto p-4 space-y-2">
+    <div className="w-xl mx-auto p-4 space-y-2">
       {data?.pages.map((page, index) => (
-        <div key={index} className="grid gap-4 ">
-          {page.recipes.map((recipe: Recipe) => (
-            <div
-              key={recipe.id}
-              className="p-4 border border-gray-300 rounded-md shadow-sm"
-            >
-              <img
-                src={recipe.image}
-                alt={recipe.name}
-                className="w-full h-56 object-cover rounded-md mb-3"
-              />
-              <h2 className="text-lg font-semibold mb-3">{recipe.name}</h2>
-              <p className="text-gray-500 text-sm">
-                Difficulty:{" "}
-                <span
-                  className={`inline-block px-2 text-white rounded-full text-sm ${
-                    recipe.difficulty === "Easy"
-                      ? "bg-green-300" // light green for Easy
-                      : recipe.difficulty === "Medium"
-                      ? "bg-blue-200" // light blue for Medium
-                      : "bg-red-300" // red for Hard
-                  }`}
-                >
-                  {recipe.difficulty}
-                </span>
-              </p>
-            </div>
+        <div key={index} className="grid gap-4">
+          {page.recipes.map((recipe) => (
+            <Card key={recipe.id} recipe={recipe} />
           ))}
         </div>
       ))}
