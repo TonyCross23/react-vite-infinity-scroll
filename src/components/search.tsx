@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { NavLink } from "react-router";
 import { RxCross2 } from "react-icons/rx";
+import { FaSearch } from "react-icons/fa";
 
 const Search = () => {
   const [query, setQuery] = useState("");
@@ -23,6 +24,7 @@ const Search = () => {
     <div className="relative">
       {/* Search Input */}
       <div className="relative w-[200px] sm:w-[150px] md:w-[300px]">
+        <FaSearch className="absolute left-9 top-1/2 transform -translate-y-1/2 text-gray-500" />
         <input
           type="text"
           value={query}
@@ -50,13 +52,13 @@ const Search = () => {
 
       {/* Modal Box */}
       {isOpen && query && (
-        <div className="absolute top-12 left-0 w-[250px] bg-white dark:bg-neutral-800 border rounded shadow-lg p-2">
+        <div className="absolute top-12 left-0 w-[250px] md:ms-13 bg-white dark:bg-neutral-800 dark:text-white/50 border rounded shadow-lg p-2">
           {recipes.length > 0 ? (
             <ul>
               {recipes.map((recipe) => (
                 <li
                   key={recipe.id}
-                  className="p-2 hover:bg-gray-100 cursor-pointer"
+                  className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 cursor-pointer"
                 >
                   <NavLink to={`/recipes/${recipe.id}`}>{recipe.name}</NavLink>
                 </li>
