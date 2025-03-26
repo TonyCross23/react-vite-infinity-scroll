@@ -13,7 +13,7 @@ const Navbar = () => {
       <div className="flex items-center justify-between px-4">
         <NavLink to={"/"}>
           <h1 className="text-xl font-bold uppercase dark:text-white">
-            <FaPlateWheat />
+            <FaPlateWheat className="text-blue-500" />
           </h1>
         </NavLink>
         {/* Search Bar */}
@@ -32,7 +32,7 @@ const Navbar = () => {
             Home
           </NavLink>
           <NavLink
-            to={"/save"}
+            to={"/recipes/save"}
             className={({ isActive }) =>
               isActive
                 ? "text-blue-500 font-bold"
@@ -79,7 +79,7 @@ const Navbar = () => {
                 Home
               </NavLink>
               <NavLink
-                to="/about"
+                to="/recipes/save"
                 className={({ isActive }) =>
                   `w-[100px] text-center rounded-md py-1 mx-auto transition ${
                     isActive
