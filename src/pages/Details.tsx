@@ -95,7 +95,7 @@ const Details = () => {
               {recipe.tags.map((tag, index) => (
                 <li
                   key={index}
-                  className="px-2 text-sm font-medium text-red-300 dark:bg-gray-50 dark:text-red-500 bg-gray-100 rounded-full"
+                  className="px-2 text-sm font-medium text-red-300 bg-gray-200 dark:bg-gray-50 dark:text-red-500  rounded-full"
                 >
                   {tag}
                 </li>

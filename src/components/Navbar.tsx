@@ -3,8 +3,8 @@ import { CiBellOn } from "react-icons/ci";
 import { IoMdMenu } from "react-icons/io";
 import { useState } from "react";
 import { RxCross2 } from "react-icons/rx";
-import { FiSearch } from "react-icons/fi";
 import { FaPlateWheat } from "react-icons/fa6";
+import Search from "./search";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,14 +18,7 @@ const Navbar = () => {
         </NavLink>
         {/* Search Bar */}
         <div className="relative w-full max-w-xs">
-          <input
-            type="search"
-            className="w-[200px] ms-8 sm:w-[150px] md:w-[300px] py-1 pl-10 pr-2 rounded-md bg-white/50 border
-             border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500
-             dark:bg-neutral-800 dark:border-gray-800 dark:focus:ring-neutral-700 dark:text-white"
-            placeholder="Search for recipes"
-          />
-          <FiSearch className="absolute left-10 top-1/2 transform -translate-y-1/2 text-gray-500 text-lg dark:text-white/50" />
+          <Search />
         </div>
         <div className="md:flex hidden gap-4">
           <NavLink

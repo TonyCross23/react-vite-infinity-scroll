@@ -6,7 +6,7 @@ import ThemeToggle from "../components/ThemeToggle";
 const Layout = () => {
   return (
     <div className=" bg-neutral-100 dark:bg-neutral-800">
-      <main className="flex-1 max-w-3xl mx-auto w-full px-4 min-h-screen">
+      <main className="flex-1 max-w-4xl mx-auto w-full px-4 min-h-screen">
         <ThemeToggle />
         <div className="flex flex-col min-h-screen">
           <Navbar />

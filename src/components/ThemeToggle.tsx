@@ -18,7 +18,7 @@ const ThemeToggle = () => {
   };
   return (
     <button
-      className="fixed bottom-4 right-4 p-3 rounded-full bg-primary-500 text-white bg-neutral-800 border border-white dark:border-neutral-600 dark:text-white/80 dark:bg-neutral-700"
+      className="fixed bottom-4 right-4 p-3 rounded-full bg-primary-500 text-black bg-neutral-200 border border-white dark:border-neutral-600 dark:text-white/80 dark:bg-neutral-700"
       onClick={toggleTheme}
     >
       {theme === "light" ? <RiMoonLine /> : <BsFillSunFill />}
