@@ -6,7 +6,7 @@ const SaveRecipes = () => {
   return (
     <div className="p-4 text-black dark:text-white">
       {saveRecipe.length === 0 ? (
-        <p>No saved recipes.</p>
+        <p className="flex items-center justify-center">No saved recipes.</p>
       ) : (
         <ul>
           {saveRecipe.map((recipe) => (
